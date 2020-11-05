@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  topic: MyString
+  location: MyString
+  roomNumber: 1
+  profesorName: MyString
+  startDate: MyString
+  endDate: MyString
+  beginningTime: MyString
+  endingTime: MyString
+  student: one
+  requirements: MyString
+
+two:
+  topic: MyString
+  location: MyString
+  roomNumber: 1
+  profesorName: MyString
+  startDate: MyString
+  endDate: MyString
+  beginningTime: MyString
+  endingTime: MyString
+  student: two
+  requirements: MyString
