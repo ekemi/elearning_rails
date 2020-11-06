@@ -1,1 +1,30 @@
-<h1> Sign Up <h1>
+<h3> Student Registration </h3>
+
+<%= form_for(@student, url:'/signup') do |f| %>
+    <%= f.label :firstName %>
+    <%= f.text_field :firstName %>
+    <br>
+    <%= f.label :lastName %>
+    <%= f.text_field :lastName %>
+    <br>
+    <%= f.label :dateOfBirth %>
+    <%= f.text_field :dateOfBirth %>
+    <br>
+
+    <%= f.label :address %>
+    <%=f.text_field :address %>
+    <br>
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+    <br>
+    <%= f.label :phoneNumber %>
+    <%=f.number_field :phoneNumber %>
+    <br>
+    <%= f.label :Username%>
+    <%=f.text_field :username %>
+    <br>
+    <%=f.label :Password%>
+    <%=f.password_field :password %>
+    <br>
+    <%=f.submit 'Submit'%>
+    <%end%>
