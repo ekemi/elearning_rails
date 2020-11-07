@@ -1,1 +1,8 @@
 <h1> student show </h1>
+<h1> Welcome , <%=@student.username%></h1>
+
+<%= form_tag("/logout", method:'delete')%>
+  <%= submit_tag "Log Out"%>
+<%=link_to 'Logout', root_path, method:'delete'%>
+# form_tag :is used for basic forms that are not attached to a specific Controller#action
+#form_for : is more advanced compared to form_tag. It works with grabbing values from your model and tries to find the appropriate route the form needs to take
