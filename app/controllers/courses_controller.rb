@@ -1,6 +1,12 @@
 class CoursesController < ApplicationController
     before_action :redirect_if_not_logged_in
-
+    def index
+        if param[:topic_name]
+            @courses =Course.search(param[:topic_name])
+        else
+            @course = Recipe.beta.all
+        end
+    end 
     def new
         @course = Course.new
     end
@@ -13,6 +19,26 @@ class CoursesController < ApplicationController
     else
         render :new
     end
+    end
+    def show
+        @course = Course.find_by_id(param[:id])
+    end
+
+    def edit 
+        @course = Course.fin(param[:id])
+
+    end
+
+    def update 
+        @course = current_student.courses.find(param[:id])
+        if @course.update(course_params)
+            redirect_to course_path(@course)
+
+
+        else
+            @error = @course.errors.full_messages
+            render :edit
+        end
     end
 
     private 
