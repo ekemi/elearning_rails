@@ -14,6 +14,12 @@ Rails.application.routes.draw do
 
   #Log Out page
   delete '/logout' => 'sessions#destroy'# user can not view in the url bar
-  resources :students
-  resources :courses
+  resources :reviews
+
+  resources :students do
+    resources :courses
+  end
+  resources :courses do
+    resources :reviews
+  end
 end

@@ -1,1 +1,17 @@
-<h1>All courses </h1>
+<div >
+
+<h4> Seach for a course: </h4>
+
+<%= form_tag(courses_path, method: 'get') do %>
+    <%=text_field_tag (:topic_name)%>
+    <%= submit_tag("Search")%>
+    <%end%>
+    </div>
+
+    <div>
+    # <ul>
+    # <%=@courses.each do |course|%>
+    # <li><%= link_to course.topic,course_path(course)%></li>
+    # <%end%>
+    # </ul>
+    </div>

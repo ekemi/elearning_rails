@@ -1,10 +1,10 @@
 class CoursesController < ApplicationController
     before_action :redirect_if_not_logged_in
     def index
-        if param[:topic_name]
-            @courses =Course.search(param[:topic_name])
+        if params[:topic_name]
+            @courses =Course.search(params[:topic_name])
         else
-            @course = Recipe.beta.all
+            @course = Course.beta.all
         end
     end 
     def new
@@ -21,16 +21,16 @@ class CoursesController < ApplicationController
     end
     end
     def show
-        @course = Course.find_by_id(param[:id])
+        @course = Course.find_by_id(params[:id])
     end
 
     def edit 
-        @course = Course.fin(param[:id])
+        @course = Course.fin(params[:id])
 
     end
 
     def update 
-        @course = current_student.courses.find(param[:id])
+        @course = current_student.courses.find(course_params[:id])
         if @course.update(course_params)
             redirect_to course_path(@course)
 

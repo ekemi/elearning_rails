@@ -1,0 +1,50 @@
+<h1> Edit your Course </h1>
+
+<%= form_for (@course) do |f| %>
+    <%= f.label :topic %>
+    <%=f.text_field :topic %>
+    <br>
+    <br>
+    <%=f.label :location %>
+    <%=f.text_field :location %>
+    <br>
+    <br>
+    <%=f.label :roomNumber %>
+    <%=f.number_field :roomNumber %>
+    <br>
+    <br>
+    <%=f.label :profesorName %>
+    <%=f.text_field :profesorName %>
+    <br>
+    <br>
+    <%=f.label startDate %>
+    <%=f.text_field :startDate %>
+    <br>
+    <br>
+    <%=f.label :endDate %>
+    <%=f.text_field :endDate %>
+    <br>
+    <br>
+    <%=f.label :beginningDate %>
+    <%=f.text_field :beginningDate %>
+    <br>
+    <br>
+    <%=f.label :endingDate %>
+    <%=f.number_field :endingDate %>
+    <br>
+    <br>
+    <%=f.label :requirements %>
+    <%=f.text_field :requirements %>
+    <br>
+    <br>
+    <%= f.submit "Submit"%>
+    <%end%>
+    
+    
+    
+    
+    
+    
+    
+
+

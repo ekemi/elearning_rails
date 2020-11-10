@@ -1,4 +1,10 @@
-<h1>new courses</h1>
+<div class ="jumbotron">
+
+<br>
+<h1> Add a new Course </h1>
+</br>
+</div>
+</br>
 
 <%= form_for (@course) do |f| %>
    
@@ -33,5 +39,5 @@
     <%= f.label :requirements%>
     <%= f.text_field :requirements%>
     <br>
-    <%= f.submit 'Register'%>
+    <%= f.submit 'Add Course'%>
     <%end%>

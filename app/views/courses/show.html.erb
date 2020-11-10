@@ -1,0 +1,13 @@
+<h1><%=@course.topic %></h1>
+<h4><%=@course.location%></h4>
+
+<%= link_to "Add a Riew",new_course_review_path(@course)%>
+<br><br>
+
+<h4><strong>Reviews:</strong></h4>
+<%@course.reviews.each do |review|%>
+    <ul>
+    <li><strong><%= review.student.username%></strong> says "<%=review.comment%>"</li>
+    <li><strong><%= review.student.username%></strong> gives "<%=review.rating%>"</li>
+    </ul>
+    <%end%>
