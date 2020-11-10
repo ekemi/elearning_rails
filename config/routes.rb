@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #any wrong url
+ 
   #Home page route
   root 'sessions#home'
   #Sign Up page
@@ -13,4 +15,5 @@ Rails.application.routes.draw do
   #Log Out page
   delete '/logout' => 'sessions#destroy'# user can not view in the url bar
   resources :students
+  resources :courses
 end

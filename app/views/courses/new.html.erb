@@ -1,0 +1,37 @@
+<h1>new courses</h1>
+
+<%= form_for (@course) do |f| %>
+   
+    <%= f.label :topic%>
+    <%= f.text_field :topic%>
+    <br>
+
+    <%= f.label :location%>
+    <%= f.text_field :location%>
+    <br>
+
+    <%= f.label :roomNumber%>
+    <%= f.number_field :roomNumber%>
+    <br>
+    <%= f.label :profesorName%>
+    <%= f.text_field :profesorName%>
+    <br>
+
+    <%= f.label :startDate%>
+    <%= f.text_field :startDate%>
+    <br>
+    <%= f.label :endDate%>
+    <%= f.text_field :endDate%>
+    <br>
+    <%= f.label :beginningTime%>
+    <%= f.text_field :beginningTime%>
+    <br>
+
+    <%= f.label :endingTime%>
+    <%= f.text_field :endingTime%>
+    <br>
+    <%= f.label :requirements%>
+    <%= f.text_field :requirements%>
+    <br>
+    <%= f.submit 'Register'%>
+    <%end%>
