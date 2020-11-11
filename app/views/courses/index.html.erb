@@ -7,11 +7,25 @@
     <%= submit_tag("Search")%>
     <%end%>
     </div>
-
+    <% if @params%>
     <div>
-    # <ul>
-    # <%=@courses.each do |course|%>
-    # <li><%= link_to course.topic,course_path(course)%></li>
-    # <%end%>
-    # </ul>
+
+    <ul>
+    <%=@courses.each do |course|%>
+    <li><%= link_to course.topic,course_path(course)%></li>
+    <li><%= course.location%></li>
+    <li><%= course.roomNumber%></li>
+    <li><%= course.profesorName%></li>
+    <li><%= course.startDate%></li>
+    <li><%= course.endDate%></li>
+    <li><%= course.beginningTime%></li>
+    <li><%= course.endingTime%></li>
+    <li><%= course.requirements%></li>
+    <br><br>
+
+    <%end%>
+    </ul>
     </div>
+    <% else %>
+    <%=@error%>
+    <%end%>

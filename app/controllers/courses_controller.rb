@@ -1,10 +1,15 @@
 class CoursesController < ApplicationController
     before_action :redirect_if_not_logged_in
     def index
-        if params[:topic_name]
+        @params = params[:topic_name]
+        if @params
             @courses =Course.search(params[:topic_name])
+            @courses.each do |course|
+                course
+            end
         else
-            @course = Course.beta.all
+            @error = "No topic"
+            @courses = Course.beta.all
         end
     end 
     def new
